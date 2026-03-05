@@ -1,0 +1,25 @@
+{
+  "name": "compression-service",
+  "version": "1.0.0",
+  "description": "File Compression Service CLI and library for images, PDFs, videos, and Office documents.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "file-type": "^16.5.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "mime-types": "^2.1.35",
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.24",
+    "@types/mime-types": "^2.1.4",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0", 
+    "typescript": "^5.0.0"
+  }
+}

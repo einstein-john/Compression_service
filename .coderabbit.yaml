@@ -15,17 +15,16 @@ reviews:
   auto_review:
     enabled: true
     drafts: false
+  path_instructions:
+    - path: "src/**"
+      instructions: |
+        Node.js/TypeScript backend: file compression (images, PDF, video, documents).
+        Check temp/upload paths, stream and pipeline error handling, OUTPUT_TEMP_DIR usage,
+        and missing-binary errors (ffmpeg, ghostscript) surfacing clearly to callers.
+    - path: "frontend/**"
+      instructions: |
+        Vite + React + Tailwind UI. Reuse components under frontend/src/app/components/ui.
+        Prefer fetch/API error handling and accessible form controls.
 
 chat:
   auto_reply: true
-
-path_instructions:
-  - path: "src/**"
-    instructions: >
-      Node.js/TypeScript backend: file compression (images, PDF, video, documents).
-      Check temp/upload paths, stream and pipeline error handling, OUTPUT_TEMP_DIR usage,
-      and missing-binary errors (ffmpeg, ghostscript) surfacing clearly to callers.
-  - path: "frontend/**"
-    instructions: >
-      Vite + React + Tailwind UI. Reuse components under frontend/src/app/components/ui.
-      Prefer fetch/API error handling and accessible form controls.

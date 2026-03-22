@@ -1,9 +1,12 @@
+# Host ports are overridable (e.g. Coolify: set WEB_HOST_PORT / API_HOST_PORT if 8080 or 3001 are taken).
 services:
   api:
     build:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
+    ports:
+      - "${API_HOST_PORT:-3001}:3001"
     environment:
       OUTPUT_TEMP_DIR: /data/compressed-output
       PORT: "3001"
@@ -16,7 +19,7 @@ services:
       context: .
       dockerfile: Dockerfile.web
     ports:
-      - "8080:80"
+      - "${WEB_HOST_PORT:-8080}:80"
     depends_on:
       - api
     restart: unless-stopped

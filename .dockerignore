@@ -1,0 +1,12 @@
+.git
+.github
+**/node_modules
+dist
+frontend/dist
+**/*.md
+**/.env
+**/.env.*
+!**/.env.example
+coverage
+.nyc_output
+*.log

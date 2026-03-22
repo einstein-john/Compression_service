@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# CodeRabbit reads this file from the branch under review. Commit changes to tune PR reviews.
+# Install the app for your Git host: https://docs.coderabbit.ai/getting-started/quickstart
+
+language: "en-US"
+early_access: false
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  review_details: true
+  auto_review:
+    enabled: true
+    drafts: false
+
+chat:
+  auto_reply: true
+
+path_instructions:
+  - path: "src/**"
+    instructions: >
+      Node.js/TypeScript backend: file compression (images, PDF, video, documents).
+      Check temp/upload paths, stream and pipeline error handling, OUTPUT_TEMP_DIR usage,
+      and missing-binary errors (ffmpeg, ghostscript) surfacing clearly to callers.
+  - path: "frontend/**"
+    instructions: >
+      Vite + React + Tailwind UI. Reuse components under frontend/src/app/components/ui.
+      Prefer fetch/API error handling and accessible form controls.

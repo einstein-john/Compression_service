@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      OUTPUT_TEMP_DIR: /data/compressed-output
+      PORT: "3001"
+      LOG_LEVEL: info
+    volumes:
+      - compressed-output:/data/compressed-output
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  compressed-output:

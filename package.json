@@ -16,11 +16,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.21.0",
-    "file-type": "^16.5.4",
+    "file-type": "^21.3.2",
     "fluent-ffmpeg": "^2.1.2",
     "mime-types": "^2.1.35",
-    "multer": "^1.4.5-lts.1",
-    "sharp": "^0.33.0"
+    "multer": "^2.5.0",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -29,7 +29,7 @@
     "@types/mime-types": "^2.1.4",
     "@types/multer": "^1.4.12",
     "@types/node": "^20.0.0",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.2.5",
     "ts-node": "^10.9.0",
     "typescript": "^5.0.0"
   }
